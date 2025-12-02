@@ -1,10 +1,10 @@
 var documentConfig =
 {
   title: "NLDT-AppStore",
-  subtitle: "Architectuur",
+  subtitle: "AppStore Architectuur",
   // shortName: "NLDT-AppStore",
   // pubDomain: "geen",
-  specStatus: "vv",
+  specStatus: "wv",
   specType: "hr",
   license: "cc-by",
   maxTocLevel: 3,
@@ -12,7 +12,7 @@ var documentConfig =
   //   "https://docs.geostandaarden.nl/NLDT-AppStore/"
   // ],
   publishDate: "2025-10-29",
-  publishVersion: "0.8.0",
+  publishVersion: "",
   thisVersion: [
     "https://geonovum.github.io/NLDT-AppStore/"
   ],
