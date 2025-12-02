@@ -49,10 +49,14 @@ Het framework onderscheidt verschillende niveaus van interoperabiliteit: **techn
 Daarnaast benadrukt het EIF het belang van open standaarden, herbruikbare bouwstenen en een “once-only”-benadering, waarbij gegevens slechts één keer hoeven te worden aangeleverd en vervolgens veilig kunnen worden hergebruikt. Het framework stimuleert daarmee efficiëntie, transparantie en innovatie binnen de Europese digitale overheid. Door de richtlijnen van het EIF te volgen, kunnen organisaties niet alleen hun interne processen verbeteren, maar ook bijdragen aan een sterkere, geïntegreerde digitale Europese markt.
 
 ### Legal interoperability
-Bla bla
+Binnen het European Interoperability Framework (EIF) verwijst legal interoperability naar het wegnemen van juridische barrières zodat organisaties informatie en diensten grensoverschrijdend kunnen uitwisselen. Dit betekent dat wet- en regelgeving van verschillende bestuurslagen — Europees, nationaal, regionaal en lokaal — op elkaar moet worden afgestemd of op zijn minst verenigbaar moet zijn. Overheden moeten nagaan of hun juridische kaders gegevensuitwisseling toestaan, duidelijke afspraken maken over rechten en plichten (bijvoorbeeld rond gegevensbescherming, intellectueel eigendom, archivering en open standaarden), en ervoor zorgen dat wettelijke beperkingen of interpretatieverschillen samenwerking niet belemmeren. Legal interoperability creëert zo de voorwaarden waarbinnen technische, organisatorische en semantische interoperabiliteit effectief kunnen functioneren.
+
 ### Organisational interoperability
-Bla bla
+De organisatorische interoperability stemt processen af, verantwoordelijkheden en workflows tussen organisaties zodat zij effectief publieke diensten kunnen leveren die over grenzen, domeinen en bestuursniveaus heen lopen. Dit betekent dat betrokken partijen hun diensten op elkaar moeten laten aansluiten, afspraken moeten maken over rollen, governance, besluitvorming en coördinatie, en moeten zorgen voor geharmoniseerde processen die interoperabiliteit structureel ondersteunen. Organisational interoperability gaat dus niet over technologie, maar over samenwerking: het creëren van een gezamenlijke bedrijfsvoering die naadloze en geïntegreerde dienstverlening mogelijk maakt.
+
 ### Semantic interoperability
-Bla bla
+Semantic interoperability helpt organisaties een gedeeld begrip te hebben van de betekenis van informatie die zij uitwisselen. Het gaat erom dat data, begrippen en hun onderlinge relaties op dezelfde manier worden geïnterpreteerd, ongeacht het systeem, de context of het land waaruit ze komen. Dit vereist gemeenschappelijke datamodellen, vocabularia, taxonomieën en ontologieën, evenals afspraken over hoe begrippen worden gedefinieerd en gebruikt. Door semantische interoperabiliteit kan informatie automatisch, consistent en correct worden verwerkt, zodat systemen én mensen dezelfde betekenis toekennen aan de uitgewisselde gegevens.
+
 ### Technical interoperability
-Bla bla
+Met Technical interoperability wordt bedoeld de technische voorwaarden die nodig zijn om systemen en applicaties veilig, betrouwbaar en efficiënt informatie te laten uitwisselen. Dit omvat afspraken over open standaarden, protocollen, interfaces, dataformaten, beveiligingsmechanismen en connectiviteitsoplossingen die interoperabiliteit mogelijk maken. Technical interoperability zorgt ervoor dat IT-systemen van verschillende organisaties technisch met elkaar kunnen communiceren, gegevens correct kunnen verzenden en ontvangen, en dit doen op een manier die schaalbaar, duurzaam en beveiligd is.
+
