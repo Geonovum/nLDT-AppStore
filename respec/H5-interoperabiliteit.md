@@ -25,7 +25,17 @@ De verplichte adoptie van open, internationale standaarden is ononderhandelbaar 
 
 Governance is het fundament dat vertrouwen, soevereiniteit en wettelijke naleving garandeert, wat essentieel is voor succesvolle interoperabiliteit.
 
-Alle data en rekenmodules voldoen aan wetgeving. In de grijze zone is er een governance board
+#### Vertrouwen
+
+Vertrouwen verwijst naar de zekerheid dat organisaties op een voorspelbare, veilige en betrouwbare manier met elkaar kunnen samenwerken en informatie kunnen uitwisselen. Vertrouwen ontstaat wanneer partijen erop kunnen rekenen dat systemen voldoen aan overeengekomen standaarden, dat data correct en integer wordt behandeld, en dat beveiligings- en privacymaatregelen robuust en transparant zijn. Het omvat ook het vertrouwen in governance-structuren: duidelijke afspraken over verantwoordelijkheden, naleving, auditability en accountability. Een interoperabele architectuur moet dus niet alleen technisch functioneren, maar ook aantoonbaar betrouwbaar zijn, zodat organisaties risico’s durven delen, afhankelijkheden durven aangaan en diensten over grenzen heen durven te integreren.
+
+#### Soevereiniteit
+
+Soevereiniteit is het vermogen van organisaties – en in bredere zin staten of bestuurslagen – om controle te behouden over hun data, processen en digitale infrastructuren terwijl ze toch interoperabel samenwerken. Het concept benadrukt dat interoperabiliteit nooit mag leiden tot afhankelijkheden die de autonomie of besluitvorming van een partij beperken. Soevereiniteit vereist daarom duidelijke afspraken over eigenaarschap van data, keuzevrijheid in technologie en leveranciers, governance over gedeelde systemen, en transparantie in hoe informatie wordt verwerkt en uitgewisseld. Architecturen die soevereiniteit respecteren, zorgen voor open standaarden, portabiliteit, beveiliging en reversibiliteit, zodat samenwerking mogelijk is zonder dat een organisatie haar strategische of juridische controle verliest.
+
+#### Wettelijke naleving
+
+Alle bouwblokken voldoen aan de bestaande wetgeving - punt. In geval van het ontbreken van wetgeving, of onduidelijkheid binnen de wetgeving, moet er nog steeds gehandeled kunnen worden--dan komen we in een grijze zone. Om in de grijze zone te kunnen blijven handelen is er een governance board : die helpt met raad hoe een bepaald probleem op te lossen, ethisch te handelen en risicos te benoemen en wegen. 
 
 #### Wettelijke Compliance en Vertrouwen
 1. Data Governance Act (DGA): De DGA is een kernpijler die het vertrouwen in data-uitwisseling moet vergroten. Governance moet maatregelen bevatten om te zorgen dat het platform fungeert als een betrouwbare Data-Intermediair.
@@ -43,7 +53,6 @@ Alle data en rekenmodules voldoen aan wetgeving. In de grijze zone is er een gov
 
 ## Europeese Interoperabiliteits Framework
 
-Het **European Interoperability Framework (EIF)** is een beleidskader dat EU-lidstaten ondersteunt bij het naadloos uitwisselen van informatie en diensten over lands- en organisatiedomeinen heen. Het richt zich op het toegankelijk en efficiënt laten samenwerken van overheidsinstanties, zodat burgers en bedrijven kunnen profiteren van betere, coherente en grensoverschrijdende digitale diensten. Het EIF definieert daarvoor gemeenschappelijke principes, richtlijnen en aanbevelingen die helpen om barrières in systemen, processen en regelgeving te doorbreken.
 Het framework onderscheidt verschillende niveaus van interoperabiliteit: **technisch, semantisch, organisatorisch en juridisch**. Deze niveaus zorgen ervoor dat niet alleen de technische systemen kunnen communiceren, maar ook dat gegevens dezelfde betekenis hebben, processen op elkaar zijn afgestemd en regelgeving compatibel is. Zo voorkomt het EIF dat samenwerking stokt door verschillende interpretaties van data, uiteenlopende werkafspraken of conflicterende wetgeving.
 
 Daarnaast benadrukt het EIF het belang van open standaarden, herbruikbare bouwstenen en een “once-only”-benadering, waarbij gegevens slechts één keer hoeven te worden aangeleverd en vervolgens veilig kunnen worden hergebruikt. Het framework stimuleert daarmee efficiëntie, transparantie en innovatie binnen de Europese digitale overheid. Door de richtlijnen van het EIF te volgen, kunnen organisaties niet alleen hun interne processen verbeteren, maar ook bijdragen aan een sterkere, geïntegreerde digitale Europese markt.
