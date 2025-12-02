@@ -29,11 +29,6 @@ var documentConfig =
       name: "Niels Hoffmann",
       company: "Geonovum",
       companyURL: "https://www.geonovum.nl/"
-    },
-    {
-      name: "Michel Grothe",
-      company: "Geonovum",
-      companyURL: "https://www.geonovum.nl/"
     }
   ],
   editors: [
@@ -44,11 +39,6 @@ var documentConfig =
     },
     {
       name: "Niels Hoffmann",
-      company: "Geonovum",
-      companyURL: "https://www.geonovum.nl/"
-    },
-    {
-      name: "Michel Grothe",
       company: "Geonovum",
       companyURL: "https://www.geonovum.nl/"
     }
