@@ -13,6 +13,7 @@ De App Store van Apple of de Play Store van Google gebruiken de SDK’s van resp
 Een beetje een boutade, maar het zet de scene.
 
 De keuze van het web als Operating Systeem heeft gevolgen:
+
 1.	Data wordt niet meer gedeeld via USB-Sticks, lokale netwerkdrives of email
 1.	Data wordt bij de Bron beheerd
 1.	Rekenmodellen worden volgens dezelfde technieken gedeeld als Data
