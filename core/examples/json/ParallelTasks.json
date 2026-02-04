@@ -5,25 +5,90 @@
     "http://www.opengis.net/spec/recipe/0.3/conf/profiles",
     "http://www.opengis.net/spec/recipe/0.3/conf/types-schemas"
   ],
-  "id": "Recipe_Roads",
-  "title": "Recipe blabla title",
-  "description": "Recipe blabla description",
-
+  "id": "dt-rain-traffic-rtm-2026",
+  "title": "Simuleer effect regen op verkeer",
+  "description": "Deze recipe brengt neerslag, riolering, wegennet en mobiliteitsmodellen bij elkaar om te simuleren welke impact een zware bui heeft op verkeer. Het resultaat kan gebruikt worden om knelpunten te identificeren, maatregelen te testen en scenario’s door te rekenen in de digital twin.",
+  "attribution": [
+    "Geonovum",
+    "Purple Polar Bear",
+    "Triply",
+    "Future Insight",
+    "Esri",
+    "Clappform",
+    "Nelen & Schuurmans",
+    "Goudappel",
+    "ilabs",
+    "Tygron",
+    "Imagem",
+    "Avineon Tensing",
+    "Synexis"
+  ],
+  "version": "1.0.0",
+  "tags": ["rain", "traffic", "climate"],
+  "license": "CC-BY-4.0",
+  "links": [
+    {
+      "rel": "self",
+      "type": "application/json",
+      "title": "This document",
+      "href": "https://appstore.dt/daraa?f=html"
+    },
+    {
+      "rel": "alternate",
+      "type": "text/html",
+      "title": "This document as HTML",
+      "href": "https://appstore.dt/daraa?f=html"
+    },
+    {
+      "rel": "codelists",
+      "title": "Codelists used in the data",
+      "href": "https://appstore.dt/daraa/codelists"
+    },
+    {
+      "rel": "conformance",
+      "title": "Recipe conformance classes implemented by this server",
+      "href": "https://appstore.dt/daraa/conformance"
+    }
+  ],
   "scenegraph": {
-    "title": "blabla",
-    "description": "blabla",
+    "title": "Brondata op OUP",
+    "description": "Brondata op OUP voor de Digital Twin Rotterdam",
     "layers": [
       {
         "rel": "items",
-        "title": "Riolering",
-        "type": "application/geo+json",
-        "href": "https://rotterdam.nl/v1/collections/riolering/items?f=html&bbox=36.3952%2C32.6922%2C36.4308%2C32.7162&datetime=2011-03-16T14%3A51%3A12Z%2F2015-09-11T19%3A15%3A35Z"
+        "title": "Aerial imagery als COG",
+        "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+        "href": "https://rotterdam.nl/v1/collections/imagery/items?f=html&bbox=36.3952%2C32.6922%2C36.4308%2C32.7162&datetime=2011-03-16T14%3A51%3A12Z%2F2015-09-11T19%3A15%3A35Z"
       },
       {
         "rel": "items",
-        "title": "Stranddouches",
+        "title": "3D city model als 3DTiles",
+        "type": "model/gltf+json; profile=3dtiles",
+        "href": "https://rotterdam.nl/v1/collections/3d-city-model/items?f=html&bbox=36.3952%2C32.6922%2C36.4308%2C32.7162&datetime=2011-03-16T14%3A51%3A12Z%2F2015-09-11T19%3A15%3A35Z"
+      },
+      {
+        "rel": "items",
+        "title": "DTM / maaiveldhoogte",
         "type": "application/geo+json",
-        "href": "https://rotterdam.nl/v1/collections/stranddouches/items?f=html&bbox=36.3952%2C32.6922%2C36.4308%2C32.7162&datetime=2011-03-16T14%3A51%3A12Z%2F2015-09-11T19%3A15%3A35Z"
+        "href": "https://rotterdam.nl/v1/collections/DTM/items?f=html&bbox=36.3952%2C32.6922%2C36.4308%2C32.7162&datetime=2011-03-16T14%3A51%3A12Z%2F2015-09-11T19%3A15%3A35Z"
+      },
+      {
+        "rel": "items",
+        "title": "Wegennet (incl. snelwegen en hoofdroutes)",
+        "type": "application/geo+json",
+        "href": "https://rotterdam.nl/v1/collections/wegennet/items?f=html&bbox=36.3952%2C32.6922%2C36.4308%2C32.7162&datetime=2011-03-16T14%3A51%3A12Z%2F2015-09-11T19%3A15%3A35Z"
+      },
+      {
+        "rel": "items",
+        "title": "Sewer network / rioolstelsel",
+        "type": "application/geo+json",
+        "href": "https://rotterdam.nl/v1/collections/rioolstelsel/items?f=html&bbox=36.3952%2C32.6922%2C36.4308%2C32.7162&datetime=2011-03-16T14%3A51%3A12Z%2F2015-09-11T19%3A15%3A35Z"
+      },
+      {
+        "rel": "items",
+        "title": "KNMI weather forecast / neerslagveld",
+        "type": "application/x-hdf5",
+        "href": "https://knmi.nl/v1/collections/forecast/items?f=html&bbox=36.3952%2C32.6922%2C36.4308%2C32.7162&datetime=2011-03-16T14%3A51%3A12Z%2F2015-09-11T19%3A15%3A35Z"
       }
     ],
     "extent": {
@@ -53,11 +118,14 @@
           "title": "blabla",
           "description": "blabla",
           "spatial": {
-            "position": [36.395158, 32.693301, 36.430814, 32.717333],
-            "orientation": [0, 0, 0],
-            "fov": 60,
-            "near": 0.1,
-            "far": 1000
+            "heading": 90.0,
+            "tilt": 45.0,
+            "position": {
+              "lat": 51.5,
+              "lon": 5.0,
+              "z": 300.0
+            },
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
           }
         },
         {
@@ -65,11 +133,14 @@
           "title": "blabla",
           "description": "blabla",
           "spatial": {
-            "position": [36.395158, 32.693301, 36.430814, 32.717333],
-            "orientation": [0, 0, 0],
-            "fov": 60,
-            "near": 0.1,
-            "far": 1000
+            "heading": 90.0,
+            "tilt": 45.0,
+            "position": {
+              "lat": 51.5,
+              "lon": 5.0,
+              "z": 300.0
+            },
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
           }
         }
       ]
@@ -85,28 +156,28 @@
           {
             "id": "node1",
             "rel": "process",
-            "title": "todo",
+            "title": "Selecteer scenariojaar en gebied in de Unreal viewer",
             "type": "application/process+json",
             "href": "https://nelenenschuurmans.nl/v1/processes/rain"
           },
           {
             "id": "node2",
             "rel": "process",
-            "title": "todo",
+            "title": "PPB levert de juiste Common Model-datasets en provider-stekkers voor dit scenario",
             "type": "application/process+json",
             "href": "https://goudappel.nl/v1/processes/mobility"
           },
           {
             "id": "node3",
             "rel": "process",
-            "title": "todo",
+            "title": "Start het 3Di rain model vanuit de Unreal viewer, met input uit de 3Di-stekker",
             "type": "application/process+json",
             "href": "https://synexis.nl/v1/processes/mobility"
           },
           {
             "id": "node4",
             "rel": "process",
-            "title": "todo",
+            "title": "Start het Dat.Mobility model dat de RoadImpact-dataset gebruikt voor snelheidsverlagingen / afsluitingen",
             "type": "application/process+json",
             "href": "https://clappform.nl/v1/processes/330300"
           }
