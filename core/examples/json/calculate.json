@@ -159,64 +159,90 @@
   },
   "processing": [
     {
-      "id": "processing 1",
+      "id": "processing1",
       "title": "blabla",
       "description": "blabla",
+
       "nodes": [
         {
-          "id": "add",
-          "rel": "process",
-          "title": "add",
-          "type": "application/process+json",
-          "href": "http://192.168.2.124:8080/geonovum/v1/processes/add"
-        },
-        {
-          "id": "multiply",
-          "rel": "process",
-          "title": "multiply",
-          "type": "application/process+json",
-          "href": "http://192.168.2.124:8080/geonovum/v1/processes/multiply"
-        },
-        {
-          "id": "multwdfiply",
-          "rel": "process",
-          "title": "multiply",
-          "type": "application/rdf",
-          "href": "http://192.168.2.124:8080/geonovum/v1/sldkfkx"
-        }
-      ],
-      "edges": [
-        {
-          "title": "edge 1",
-          "description": "blabla for edge1",
-          "dag": [
-            {
-              "node": "add",
-              "inputs": { "number1": 2, "number2": 3 }
+          "id": "step1",
+          "link": {
+            "rel": "process",
+            "title": "add",
+            "type": "application/process+json",
+            "href": "http://192.168.2.124:8080/geonovum/v1/processes/add"
+          },
+          "body": {
+            "inputs": {
+              "number1": 19,
+              "number2": 7
             },
-            {
-              "node": "multiply",
-              "inputs": { "number1": ".outputs.sum", "number2": 2 }
+            "outputs": {
+              "sum": {
+                "transmissionMode": ["value"]
+              }
             }
-          ]
+          }
         },
         {
-          "title": "edge 2",
-          "description": "blabla for edge2",
-          "dag": [
-            {
-              "node": "multiply",
-              "inputs": { "number1": 4, "number2": 2 }
+          "id": "step2a",
+          "link": {
+            "rel": "process",
+            "title": "multiply",
+            "type": "application/process+json",
+            "href": "http://192.168.2.124:8080/geonovum/v1/processes/multiply"
+          },
+          "body": {
+            "inputs": {
+              "number1": ":step1.outputs.sum",
+              "number2": 5
             },
-            {
-              "node": "add",
-              "inputs": { "number1": ".outputs.product", "number2": 5 }
-            },
-            {
-              "node": "multiply",
-              "inputs": { "number1": ".outputs.sum", "number2": 2 }
+            "outputs": {
+              "product": {
+                "transmissionMode": ["value"]
+              }
             }
-          ]
+          }
+        },
+        {
+          "id": "step2b",
+          "link": {
+            "rel": "process",
+            "title": "multiply",
+            "type": "application/process+json",
+            "href": "http://192.168.2.124:8080/geonovum/v1/processes/multiply"
+          },
+          "body": {
+            "inputs": {
+              "number1": ":step1.outputs.sum",
+              "number2": 6
+            },
+            "outputs": {
+              "product": {
+                "transmissionMode": ["value"]
+              }
+            }
+          }
+        },
+        {
+          "id": "step3",
+          "link": {
+            "rel": "process",
+            "title": "multiply",
+            "type": "application/process+json",
+            "href": "http://192.168.2.124:8080/geonovum/v1/processes/multiply"
+          },
+          "body": {
+            "inputs": {
+              "number1": ":step2b.outputs.product",
+              "number2": 2
+            },
+            "outputs": {
+              "product": {
+                "transmissionMode": ["value"]
+              }
+            }
+          }
         }
       ],
 
