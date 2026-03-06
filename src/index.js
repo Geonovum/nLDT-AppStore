@@ -21,6 +21,8 @@ http.createServer((req, res) => {
             return res.end("File not found");
         }
 
+        console.log("downloading", filePath);
+
         res.writeHead(200);
         res.end(data);
     });

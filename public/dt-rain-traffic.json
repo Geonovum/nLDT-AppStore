@@ -50,7 +50,7 @@
       "href": "https://appstore.dt/conformance"
     }
   ],
-  "variables": {
+  "ingredients": {
     "magicNumber": 42,
     "magicLink": {
       "rel": "process",
