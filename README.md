@@ -24,31 +24,38 @@ The English version of the NLDT Architecture can be found here: [https://geonovu
 ```mermaid
 sequenceDiagram
     participant John
+    participant AppStore
+    participant Oven
+    participant N&S
+    participant Tygron
+    participant Goudappel
+    participant Clappform
+    participant Data
   
     John->>AppStore:Find recipe
     AppStore->>John:Recipe
     John-)Oven:bake met parameters
     Oven->>Oven: traverse graph
     Oven-)N&S:execute process
-    N&S->>data:get data
-    data->>N&S: data
+    N&S->>Data:get data
+    Data->>N&S: data
     N&S->>N&S: compute
     N&S--)Oven: success, results
     Oven-)Tygron:execure process
-    Tygron->>data:get data
-    data->>Tygron: data
+    Tygron->>Data:get data
+    Data->>Tygron: data
     Tygron->>Tygron: compute
     Tygron--)Oven: success, results
 
     Oven-)Goudappel:execure process
-    Goudappel->>data:get data
-    data->>Goudappel: data
+    Goudappel->>Data:get data
+    Data->>Goudappel: data
     Goudappel->>Goudappel: compute
     Goudappel--)Oven: success, results
 
     Oven-)Clappform:execure process
-    Clappform->>data:get data
-    data->>Clappform: data
+    Clappform->>Data:get data
+    Data->>Clappform: data
     Clappform->>Clappform: compute
     Clappform--)Oven: success, results
 
