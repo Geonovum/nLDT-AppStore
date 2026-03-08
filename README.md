@@ -9,11 +9,13 @@ Het respec document is te vinden op: [https://geonovum.github.io/nLDT-AppStore/]
 
 The English version of the NLDT Architecture can be found here: [https://geonovum.github.io/nLDT-AppStore/en/](https://geonovum.github.io/nLDT-AppStore/en/)
 
-## Sequence diagram
+## Recipe
 
 ```mermaid
   graph LR;
     N&S-->Tygron;
+    N&S-->Goudappel;
+    Goudappel-->Clappform
 ```
 
 
@@ -37,6 +39,19 @@ sequenceDiagram
     data->>Tygron: data
     Tygron->>Tygron: compute
     Tygron--)Oven: success, results
+
+    Oven-)Goudappel:execure process
+    Goudappel->>data:get data
+    data->>Goudappel: data
+    Goudappel->>Goudappel: compute
+    Goudappel--)Oven: success, results
+
+    Oven-)Clappform:execure process
+    Clappform->>data:get data
+    data->>Clappform: data
+    Clappform->>Clappform: compute
+    Clappform--)Oven: success, results
+
     Oven->>Oven: await results
     Oven--)John: results    
 ```
