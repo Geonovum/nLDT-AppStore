@@ -27,8 +27,8 @@ sequenceDiagram
     data->>Tygron: data
     Tygron->>Tygron: compute
     N&S->>N&S: compute
-    N&S-->>Oven: success, results
-    Tygron-->>Oven: success, results
+    N&S--)Oven: success, results
+    Tygron--)Oven: success, results
     Oven->>Oven: await results
-    Oven->>John: results    
+    Oven--)John: results    
 ```
