@@ -17,10 +17,10 @@ sequenceDiagram
   
     John->>AppStore:Find recipe
     AppStore->>John:Recipe
-    John->>Oven:bake met parameters
+    John-)Oven:bake met parameters
     Oven->>Oven: traverse graph
-    Oven->>N&S:execute process
-    Oven->>Tygron:execure process
+    Oven-)N&S:execute process
+    Oven-)Tygron:execure process
     N&S->>data:get data
     data->N&S: data
     Tygron->>data:get data
