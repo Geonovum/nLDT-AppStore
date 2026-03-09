@@ -11,6 +11,8 @@ The English version of the NLDT Architecture can be found here: [https://geonovu
 
 ## Recipe
 
+Het recept is een niet-bestaand voorbeeld en de gebruikte namen zijn louter illustratief,
+
 ```mermaid
   graph LR;
     N&S-->Tygron;
@@ -20,6 +22,8 @@ The English version of the NLDT Architecture can be found here: [https://geonovu
 
 
 ## Sequence diagram
+
+De uitvoering is van een niet-bestaand recept voorbeeld (zie boven) en de gebruikte namen zijn louter illustratief,
 
 ```mermaid
 sequenceDiagram
