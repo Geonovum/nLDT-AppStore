@@ -15,9 +15,9 @@ Het recept is een niet-bestaand voorbeeld en de gebruikte namen zijn louter illu
 
 ```mermaid
   graph LR;
-    N&S-->Tygron;
-    N&S-->Goudappel;
-    Goudappel-->Clappform
+    Weather-->Public Transportation;
+    Weather-->Mobility;
+    Mobility-->Communication
 ```
 
 
