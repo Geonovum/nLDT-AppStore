@@ -15,7 +15,7 @@ Het recept is een niet-bestaand voorbeeld en de gebruikte namen zijn louter illu
 
 ```mermaid
   graph LR;
-    Weather-->Public Transportation;
+    Weather-->Public-Transportation;
     Weather-->Mobility;
     Mobility-->Communication
 ```
