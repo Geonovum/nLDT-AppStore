@@ -1,21 +1,45 @@
-const http = require("http");
-const fs = require("fs");
-const path = require("path");
+import { createServer } from "http";
+import { readFileSync, readFile } from "fs";
+import { join } from "path";
+import YAML from "yaml";
+import { major } from "semver";
 
-const baseDir = path.join(__dirname, "..", "public");
-const basePath = "/appstore/v1";
+// Get current directory for ES modules (requires Node.js 20.16+)
+const __dirname = import.meta.dirname;
+if (__dirname === undefined) console.log("need node 20.16 or higher");
 
-http.createServer((req, res) => {
+const configPath = join(__dirname, "..");
+const yamlStr = readFileSync(join(configPath, `local.config.yml`));
+global.config = YAML.parse(yamlStr.toString());
 
-    if (!req.url.startsWith(basePath)) {
+global.config.server.id =
+  process.env.ID || global.config.server.id || "demoservice"; // Service identifier for URL path
+global.config.server.host =
+  process.env.HOST || global.config.server.host || "0.0.0.0";
+global.config.server.port =
+  process.env.PORT || global.config.server.port || 8083; // Server port
+global.config.api.version =
+  process.env.VERSION || global.config.api.version || "1.2.3"; // API version number
+
+const baseDir = join(__dirname, "..", global.config.data.path);
+
+const serviceRoot = `/${global.config.server.id}/v${major(
+  global.config.api.version
+)}`;
+
+createServer((req, res) => {
+
+    if (!req.url.startsWith(serviceRoot)) {
         res.writeHead(404);
         return res.end("Not found");
     }
 
-    let relativePath = req.url.substring(basePath.length) || "/index.html";
-    let filePath = path.join(baseDir, relativePath);
+    var pathname = req.url.split("?").shift();
 
-    fs.readFile(filePath, (err, data) => {
+    let relativePath = pathname.substring(serviceRoot.length) || "/index.html";
+    let filePath = join(baseDir, relativePath);
+
+    readFile(filePath, (err, data) => {
         if (err) {
             res.writeHead(404);
             return res.end("File not found");
@@ -27,6 +51,6 @@ http.createServer((req, res) => {
         res.end(data);
     });
 
-}).listen(8082, () => {
-    console.log("Server running at http://localhost:8082/appstore/v1");
+}).listen(global.config.server.port, () => {
+    console.log(`Server running at http://localhost:${global.config.server.port}${serviceRoot}`);
 });
