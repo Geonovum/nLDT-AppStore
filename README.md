@@ -37,8 +37,9 @@ sequenceDiagram
     participant Clappform
     participant Data
   
-    John->>AppStore:Find recipe
-    AppStore->>John:Recipe-DCAT
+    John->>AppStore:Find rain mobility
+    AppStore->>John:DCAT
+    John->>John:parse
     John->>Cookbook:Get Recipe
     Cookbook->>John:Recept
     John-)Oven:bake met parameters
