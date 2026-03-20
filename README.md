@@ -29,6 +29,7 @@ De uitvoering is van een niet-bestaand recept voorbeeld (zie boven) en de gebrui
 sequenceDiagram
     participant John
     participant AppStore
+    participant Cookbook
     participant Oven
     participant N&S
     participant Tygron
@@ -37,7 +38,9 @@ sequenceDiagram
     participant Data
   
     John->>AppStore:Find recipe
-    AppStore->>John:Recipe
+    AppStore->>John:Recipe-DCAT
+    John->>Cookbook:Get Recipe
+    Cookbook->>John:Recept
     John-)Oven:bake met parameters
     Oven->>Oven: traverse graph
     Oven-)N&S:execute process
