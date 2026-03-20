@@ -37,7 +37,7 @@ sequenceDiagram
     participant Clappform
     participant Data
   
-    John->>AppStore:Find rain mobility
+    John->>AppStore:Find rain traffic
     AppStore->>John:DCAT
     John->>John:parse
     John->>Cookbook:Get Recipe
