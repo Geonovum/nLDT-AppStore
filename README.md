@@ -38,7 +38,7 @@ sequenceDiagram
     participant Data
   
     John->>AppStore:Find rain traffic
-    AppStore->>John:DCAT
+    AppStore->>John:Metadata in DCAT
     John->>John:parse
     John->>Cookbook:Get Recipe
     Cookbook->>John:Recept
