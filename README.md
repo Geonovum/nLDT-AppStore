@@ -44,18 +44,20 @@ sequenceDiagram
     Cookbook->>John:Recept
     John-)Oven:bake met parameters
     Oven->>Oven: traverse graph
+
     Oven-)N&S:execute process
     N&S->>Data:get data
     Data->>N&S: data
     N&S->>N&S: compute
     N&S--)Oven: success, results
+
     Oven-)Tygron:execure process
+    Oven-)Goudappel:execure process
     Tygron->>Data:get data
     Data->>Tygron: data
     Tygron->>Tygron: compute
     Tygron--)Oven: success, results
 
-    Oven-)Goudappel:execure process
     Goudappel->>Data:get data
     Data->>Goudappel: data
     Goudappel->>Goudappel: compute
