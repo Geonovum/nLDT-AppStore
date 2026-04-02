@@ -39,7 +39,7 @@ sequenceDiagram
   
     John->>AppStore:Find rain traffic
     AppStore->>John:Metadata in DCAT
-    John->>John:parse
+    John->>John:parse Metadata
     John->>Cookbook:Get Recipe
     Cookbook->>John:Recept
     John-)Oven:bake met parameters
