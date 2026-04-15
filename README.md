@@ -56,7 +56,7 @@ sequenceDiagram
     Tygron->>Data:get data
     Data->>Tygron: data
     Tygron->>Tygron: compute
-    Tygron--)Oven: success, results
+    Tygron--)Cook: success, results
 
     Goudappel->>Data:get data
     Data->>Goudappel: data
@@ -69,6 +69,6 @@ sequenceDiagram
     Clappform->>Clappform: compute
     Clappform--)Cook: success, results
 
-    Cook->>Oven: await results
+    Cook->>Cook: await results
     Cook--)John: results    
 ```
