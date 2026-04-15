@@ -30,7 +30,7 @@ sequenceDiagram
     participant John
     participant AppStore
     participant Cookbook
-    participant Oven
+    participant Cook
     participant N&S
     participant Tygron
     participant Goudappel
@@ -42,17 +42,17 @@ sequenceDiagram
     John->>John:parse Metadata
     John->>Cookbook:Get Recipe
     Cookbook->>John:Recept
-    John-)Oven:bake met parameters
-    Oven->>Oven: traverse graph
+    John-)Cook:bake met parameters
+    Cook->>Cook: traverse graph
 
-    Oven-)N&S:execute process
+    Cook-)N&S:execute process
     N&S->>Data:get data
     Data->>N&S: data
     N&S->>N&S: compute
-    N&S--)Oven: success, results
+    N&S--)Cook: success, results
 
-    Oven-)Tygron:execure process
-    Oven-)Goudappel:execure process
+    Cook-)Tygron:execure process
+    Cook-)Goudappel:execure process
     Tygron->>Data:get data
     Data->>Tygron: data
     Tygron->>Tygron: compute
@@ -61,14 +61,14 @@ sequenceDiagram
     Goudappel->>Data:get data
     Data->>Goudappel: data
     Goudappel->>Goudappel: compute
-    Goudappel--)Oven: success, results
+    Goudappel--)Cook: success, results
 
-    Oven-)Clappform:execure process
+    Cook-)Clappform:execure process
     Clappform->>Data:get data
     Data->>Clappform: data
     Clappform->>Clappform: compute
-    Clappform--)Oven: success, results
+    Clappform--)Cook: success, results
 
-    Oven->>Oven: await results
-    Oven--)John: results    
+    Cook->>Oven: await results
+    Cook--)John: results    
 ```
