@@ -1,4 +1,4 @@
-# nLDT-AppStore
+# Roll-Your-Own AppStore
 
 ## Components
 
@@ -12,6 +12,9 @@ has been split in seperate services. Reason for these seperation is that each of
 This page helps with:
 - insight in the concept
 - how to run the various components of the AppStore
+
+All code in the various repo's are in nodejs and can run OoB.
+Tools used: VS Code, Nodejs (ExpressJs) and Bruno
 
 ### A catalog (aka AppStore)
 
