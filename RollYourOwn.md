@@ -28,7 +28,7 @@ Metadata that describes Processes or Recipes is not different from Metadata that
 
 Processes (that have an end-point using [OGC API Processes](https://ogcapi.ogc.org/processes)) have a custom MIME type "application/process+json", the type for recipes has not been established, but for Testbed 2026 Phase, "application/recipe+json" is suggested as custom MIME type.
 
-Recipes examples can be found [here]() and [here]().
+Recipes examples can be found [here](https://github.com/Geonovum/nLDT-AppStore/blob/main/public/rain-mobility.ttl). This dummy metadata record contains the link to the recipe.
 
 ### CookBook
 
