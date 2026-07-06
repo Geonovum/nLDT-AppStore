@@ -2,7 +2,12 @@
 
 ## Components
 
-The sequence of 1) finding a recipe, 2) getting it and 3) executing it has been split in seperate services. Reason for these seperation is that each of the 3 can be offered in the market as commercial offerings. Each have value of their own. Also, seperating them give a clear cut "separation of concern" so that they can evolve without affecting other neighboring components.
+The sequence of 
+1) finding a recipe,
+2) getting it and
+3) executing it 
+
+has been split in seperate services. Reason for these seperation is that each of the 3 can be offered in the market as commercial offerings. Each have value of their own. Also, seperating them give a clear cut "separation of concern" so that they can evolve without affecting other neighboring components.
 
 ### A catalog (aka AppStore)
 
@@ -20,8 +25,8 @@ Recipes examples can be found [here]() and [here]().
 
 A cookbook is a collection of recipes. The API for cookbook follows the same uri pattern as OGC API-Features.
 
-Example: https://example.org/v1/collections/recipes/items/kids-omelette
-Example: https://example.org/v1/collections/kids-omelette
+- Example: https://example.org/v1/collections/recipes/items/kids-omelette
+- Example: https://example.org/v1/collections/kids-omelette
 
 Currently the CookBook is readonly (GET), but future version with provide full CRUD.
 
@@ -29,10 +34,12 @@ Currently the CookBook is readonly (GET), but future version with provide full C
 
 A cook is a services that follows the recipe, step-by-step - aka a graph traversal.
 
-- OWL
-- azarro
-- self
+- [OWL](https://www.commonwl.org/)
+- [azarro](https://www.openapis.org/arazzo-specification)
+- [self](https://github.com/Geonovum/nLDT-CookBook/blob/61ba5e4485d714da8683c9c4d08636f8b7f0a366/public/dt-rain-traffic.json#L62-L162)
 
 ## Recipe
 
+A recipe is the encoding of the sequential calling of processes (aka directed acyclical graph (dag)). 
 
+An example encoding of a dag has been provided in this [recipe](https://github.com/Geonovum/nLDT-CookBook/blob/61ba5e4485d714da8683c9c4d08636f8b7f0a366/public/dt-rain-traffic.json#L62-L162). This example is not normative. The aim of the Testbed 2026 phase 2 is to establish an encoding that has consensus in the Testbed community. The consensus encoding will be brought to OGC (API Processes) group as input.
