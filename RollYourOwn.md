@@ -1,5 +1,7 @@
 # Roll-Your-Own AppStore
 
+Maak duidelijk dat dit complementair is aan tender doc en technische invulling geeft
+
 ## Components
 
 The sequence of 
@@ -18,27 +20,19 @@ Tools used: VS Code, Nodejs (ExpressJs) and Bruno
 
 ### A catalog (aka AppStore)
 
-A catalog ideally features an end-point using [API-Records](https://ogcapi.ogc.org/records) specification. Testbed 2026 Phase 2 is not looking for a new Catalog, rather than use an existing Catalog (that features API-Records)
-
-An example catalog (aka AppStore) [here](https://github.com/Geonovum/nLDT-appstore). This is a dummy catalog, with only 1 metadata record.
-
-#### example API call:
-`GET {{serviceHost}}?query=rain+mobility` returns 1 DCAT-AP-NL metadata record
+A catalog ideally features an end-point using [API-Records](https://ogcapi.ogc.org/records) specification. Testbed 2026 Phase 2 is not looking for a new Catalog, rather than use an existing Catalog (that features API-Records). Focus is on the metadata record.
 
 #### Metadata
 
 Metadata that describes Processes or Recipes is not different from Metadata that describes Datasets - both point to service end-points that provide access to the resource (a service that provides datasets, processes or recipes).
 
-Processes (that have an end-point using [OGC API Processes](https://ogcapi.ogc.org/processes)) have a custom MIME type "application/process+json", the type for recipes has not been established, but for Testbed 2026 Phase, "application/recipe+json" is suggested as custom MIME type.
+This Testbed expectation is that participants provide the Metadata, for their specific use-case - and help to define the profile.
 
-Recipes examples can be found [here](https://github.com/Geonovum/nLDT-AppStore/blob/main/public/rain-mobility.ttl). This dummy metadata record contains the link to the recipe.
+The Metadata points to recipes - the actual recipes reside in the cookbook.
 
 ### CookBook
 
-A cookbook is a collection of recipes. The API for cookbook follows the same uri pattern as OGC API-Features.
-
-- Example: https://example.org/v1/collections/recipes/items/kids-omelette
-- Example: https://example.org/v1/collections/kids-omelette
+A cookbook is a collection of recipes. The API for cookbook can take inspiration from the [OGC Building Blocks](https://geonovum-labs.github.io/bblocks-demo-register/bblock/geonovum.examples.ogcapi.processes.custom-api).
 
 Currently the CookBook is readonly (GET), but future version with provide full CRUD.
 
@@ -47,7 +41,7 @@ Currently the CookBook is readonly (GET), but future version with provide full C
 A cook is a services that follows the recipe, step-by-step - aka a graph traversal.
 
 - [OWL](https://www.commonwl.org/)
-- [azarro](https://www.openapis.org/arazzo-specification)
+- [arazzo](https://www.openapis.org/arazzo-specification)
 - [self](https://github.com/Geonovum/nLDT-CookBook/blob/61ba5e4485d714da8683c9c4d08636f8b7f0a366/public/dt-rain-traffic.json#L62-L162)
 
 ## Recipe
