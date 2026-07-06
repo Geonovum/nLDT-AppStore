@@ -9,9 +9,18 @@ The sequence of
 
 has been split in seperate services. Reason for these seperation is that each of the 3 can be offered in the market as commercial offerings. Each have value of their own. Also, seperating them give a clear cut "separation of concern" so that they can evolve without affecting other neighboring components.
 
+This page helps with:
+- insight in the concept
+- how to run the various components of the AppStore
+
 ### A catalog (aka AppStore)
 
 A catalog ideally features an end-point using [API-Records](https://ogcapi.ogc.org/records) specification. Testbed 2026 Phase 2 is not looking for a new Catalog, rather than use an existing Catalog (that features API-Records)
+
+An example catalog (aka AppStore) [here](https://github.com/Geonovum/nLDT-appstore). This is a dummy catalog, with only 1 metadata record.
+
+#### example API call:
+`GET {{serviceHost}}?query=rain+mobility` returns 1 DCAT-AP-NL metadata record
 
 #### Metadata
 
