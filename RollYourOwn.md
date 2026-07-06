@@ -42,7 +42,7 @@ A cook is a services that follows the recipe, step-by-step - aka a graph travers
 
 - [OWL](https://www.commonwl.org/)
 - [arazzo](https://www.openapis.org/arazzo-specification)
-- [self](https://github.com/Geonovum/nLDT-CookBook/blob/61ba5e4485d714da8683c9c4d08636f8b7f0a366/public/dt-rain-traffic.json#L62-L162)
+- [bespoke](https://github.com/Geonovum/nLDT-Cook/blob/main/src/engine/dagEngine.js)
 
 ## Recipe
 
